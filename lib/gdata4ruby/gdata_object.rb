@@ -165,7 +165,7 @@ module GData4Ruby
     #Saves the object if it exsits, otherwise creates it.
     def save
       if @exists
-        ret = service.send_request(Request.new(:put, @edit_uri, to_xml, {'Content-Type' => 'application/atom+xml'}))
+        ret = service.send_request(Request.new(:put, @edit_uri, to_xml))
       else
         ret = create
       end
