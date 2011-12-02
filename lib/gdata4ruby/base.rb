@@ -68,7 +68,7 @@ module GData4Ruby
     @@auth_url = "https://www.google.com/accounts/ClientLogin"
     @proxy_info = nil
     @auth_token = nil
-    @debug = false
+    @debug = true
     @gdata_version = '2.1'
 
     #Contains the ProxyInfo object for using a proxy server
@@ -112,7 +112,7 @@ module GData4Ruby
     end
     
     def log(string)
-      puts string if self.debug
+      puts string
     end
     
     def create_url(path)
